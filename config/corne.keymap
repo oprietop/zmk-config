@@ -5,6 +5,7 @@
  */
 
 // https://github.com/urob/zmk
+// https://github.com/urob/zmk-config/tree/main
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
