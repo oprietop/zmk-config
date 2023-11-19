@@ -19,13 +19,13 @@
 };
 
 &mwh {
-  acceleration-exponent = <1>;
-  time-to-max-speed-ms = <1000>;
+  acceleration-exponent = <0>;
+  time-to-max-speed-ms = <0>;
   delay-ms = <0>;
 };
 
-#define U_MOUSE_MOVE_MAX 1000
-#define U_MOUSE_SCROLL_MAX 100
+#define U_MOUSE_MOVE_MAX 2000
+#define U_MOUSE_SCROLL_MAX 50
 
 #undef MOVE_UP
 #undef MOVE_DOWN
