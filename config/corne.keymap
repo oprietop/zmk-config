@@ -14,13 +14,13 @@
 
 // Mod-Tap
 &mt {
-    flavor = "balanced";
+    flavor = "tap-preferred";
     tapping-term-ms = <200>;
 };
 
 // Layer-tap
 &lt {
-    flavor = "balanced";
+    flavor = "tap-preferred";
     tapping-term-ms = <200>;
 };
 
