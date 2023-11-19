@@ -35,10 +35,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp C_VOLUME_UP    &kp ESC    &kp K_COPY  &kp HASH      &kp K_CUT  &kp K_PASTE    &kp PAGE_UP    &mkp LCLK       &mkp LCLK    &mkp RCLK        &mkp MCLK  &kp C_NEXT
-//&kp LBKT          &kp Q        &kp W       &kp F    &kp P          &mt RIGHT_ALT B    &mt RALT J       &kp L           &kp U      &kp Y            &kp SEMI        &kp RBKT
-&kp LBKT          &kp Q        &kp W       &kp F    &kp P          &mt RIGHT_ALT B    &mt RALT J       &kp L           &kp U      &kp Y            &kp SEMI        &kp RBKT
-&kp LBKT          &kp Q        &kp W       &kp F    &kp P          &mt RIGHT_ALT B    &mt RALT J       &kp L           &kp U      &kp Y            &kp SEMI        &kp RBKT
+&kp C_VOLUME_UP    &kp ESC    &kp K_COPY  &kp HASH      &kp K_CUT  &kp K_PASTE    &kp PAGE_UP    &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &mkp MCLK  &kp C_NEXT
+&mt LSHIFT GRAVE  &kp A        &kp R       &kp S    &kp T          &kp G              &kp M            &kp N           &kp E      &kp I            &kp O           &mt RSHFT SQT
+&mt LCTRL MINUS   &mt LMETA Z  &mt LALT X  &kp C    &kp D          &kp V              &kp K            &kp H           &kp COMMA  &mt LALT PERIOD  &mt RGUI SLASH  &mt RCTRL EQUAL
 //&kp C_VOLUME_DOWN  &kp TAB    &trans      &trans        &trans     &trans         &kp HOME       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp END    &kp C_PREV
 //&kp C_MUTE         &kp LCTRL  &kp LSHFT   &kp LEFT_GUI  &trans     &trans         &kp PAGE_DOWN  &kp LEFT        &kp DOWN        &kp  UP          &kp RIGHT  &kp C_PLAY
                                           &trans        &trans     &trans         &kp RET        &kp INS         &trans
