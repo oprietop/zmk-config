@@ -14,15 +14,15 @@
 // Mod-Tap
 
 &mt {
-    flavor = "hold-preferred";
-    tapping-term-ms = <200>;
+    flavor = "tap-preferred";
+    tapping-term-ms = <150>;
 };
 
 // Layer-tap
 
 &lt {
     flavor = "tap-preferred";
-    tapping-term-ms = <200>;
+    tapping-term-ms = <150>;
 };
 
 // Mouse movement
