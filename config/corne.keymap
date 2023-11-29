@@ -13,18 +13,20 @@
 
 // Mod-Tap
 
+#define TTERM 150
+
 &mt {
     flavor = "tap-preferred";
-    tapping-term-ms = <150>;
-    quick-tap-ms = <150>;
+    tapping-term-ms = <TTERM>;
+    quick-tap-ms = <TTERM>;
 };
 
 // Layer-tap
 
 &lt {
     flavor = "tap-preferred";
-    tapping-term-ms = <150>;
-    quick-tap-ms = <150>;
+    tapping-term-ms = <TTERM>;
+    quick-tap-ms = <TTERM>;
 };
 
 // Mouse movement
