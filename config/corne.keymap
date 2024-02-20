@@ -49,7 +49,7 @@
 
 // Mouse Wheel
 
-&mwh {
+&msc {
     acceleration-exponent = <1>;
     time-to-max-speed-ms = <300>;
     delay-ms = <0>;
@@ -62,10 +62,10 @@
 #undef SCROLL_LEFT
 #undef SCROLL_RIGHT
 
-#define SCROLL_UP SCROLL_VERT(U_MOUSE_SCROLL_MAX)
-#define SCROLL_DOWN SCROLL_VERT(-U_MOUSE_SCROLL_MAX)
-#define SCROLL_LEFT SCROLL_HOR(-U_MOUSE_SCROLL_MAX)
-#define SCROLL_RIGHT SCROLL_HOR(U_MOUSE_SCROLL_MAX)
+#define SCROLL_UP SCROLL_Y(U_MOUSE_SCROLL_MAX)
+#define SCROLL_DOWN SCROLL_Y(-U_MOUSE_SCROLL_MAX)
+#define SCROLL_LEFT SCROLL_X(-U_MOUSE_SCROLL_MAX)
+#define SCROLL_RIGHT SCROLL_X(U_MOUSE_SCROLL_MAX)
 
 / {
     keymap {
