@@ -15,17 +15,6 @@
 #include <dt-bindings/zmk/mouse.h>
 
 // Config from @caksoylar, defaults in comments
-&mmv {
-  acceleration-exponent = <1>;      // 1
-  time-to-max-speed-ms = <500>;     // 300
-  delay-ms = <0>;                   // 0
-};
-
-&msc {
-  acceleration-exponent = <1>;      // 0
-  time-to-max-speed-ms = <40>;      // 300
-  delay-ms = <0>;                   // 0
-};
 
 #define U_MS_U &mmv MOVE_UP
 #define U_MS_D &mmv MOVE_DOWN
@@ -54,20 +43,20 @@
 
 // Mouse movement
 
-//&mmv {
-//    acceleration-exponent = <1>;
-//    time-to-max-speed-ms = <750>;
-//    delay-ms = <0>;
-//};
+&mmv {
+  acceleration-exponent = <1>;      // 1
+  time-to-max-speed-ms = <500>;     // 300
+  delay-ms = <0>;                   // 0
+};
 
 #define U_MOUSE_MOVE_MAX 3000
 
 // Mouse Wheel
 
 &msc {
-    acceleration-exponent = <1>;
-    time-to-max-speed-ms = <300>;
-    delay-ms = <0>;
+    acceleration-exponent = <1>;      // 0
+    time-to-max-speed-ms = <40>;      // 300
+    delay-ms = <0>;                   // 0
 };
 
 #undef SCROLL_UP
@@ -96,7 +85,7 @@
         Lower {
             bindings = <
 &kp C_VOLUME_UP    &kp ESC    &kp K_COPY        &msc SCRL_UP      &kp K_CUT          &kp K_PASTE    &kp PAGE_UP    &mkp LCLK       U_MS_U    &mkp RCLK  &mkp MCLK  &kp C_NEXT
-&kp C_VOLUME_DOWN  &kp TAB    &msc SCRL_LEFT    &msc SCRL_DOWN    &msc SCRL_RIGHT    &mkp MCLK      &kp HOME       &trans  &trans  &trans    &kp END    &kp C_PREV
+&kp C_VOLUME_DOWN  &kp TAB    &msc SCRL_LEFT    &msc SCRL_DOWN    &msc SCRL_RIGHT    &mkp MCLK      &kp HOME       U_MS_U          U_MS_D    U_MS_R     &kp END    &kp C_PREV
 &kp C_MUTE         &kp LCTRL  &kp LSHFT         &kp LEFT_GUI      &mkp LCLK          &mkp RCLK      &kp PAGE_DOWN  &kp LEFT        &kp DOWN  &kp UP     &kp RIGHT  &kp C_PLAY
                                                 &sys_reset        &bt BT_CLR         &trans         &kp RET        &kp INS         &trans
             >;
