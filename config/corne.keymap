@@ -82,8 +82,8 @@
 
         Lower {
             bindings = <
-&kp C_VOLUME_UP    &kp ESC    &kp K_COPY        &trans    &kp K_CUT          &kp K_PASTE    &kp PAGE_UP    &trans       &trans    &trans        &trans  &kp C_NEXT
-&kp C_VOLUME_DOWN  &kp TAB    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans      &kp HOME       &trans  &trans  &trans  &kp END    &kp C_PREV
+&kp C_VOLUME_UP    &kp ESC    &kp K_COPY        &msc SCRL_UP    &kp K_CUT          &kp K_PASTE    &kp PAGE_UP     &mkp LCLK       &trans    &mkp RCLK        &mkp MCLK  &kp C_NEXT
+&kp C_VOLUME_DOWN  &kp TAB    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &mkp MCLK      &kp HOME       &trans  &trans  &trans  &kp END    &kp C_PREV
 &kp C_MUTE         &kp LCTRL  &kp LSHFT         &kp LEFT_GUI      &mkp LCLK          &mkp RCLK      &kp PAGE_DOWN  &kp LEFT        &kp DOWN        &kp UP           &kp RIGHT  &kp C_PLAY
                                                 &sys_reset        &bt BT_CLR         &trans         &kp RET        &kp INS         &trans
             >;
