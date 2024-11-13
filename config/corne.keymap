@@ -48,7 +48,7 @@
 };
 
 // Mouse Wheel
-
+#define SCRL_UP MOVE_Y(ZMK_MOUSE_DEFAULT_SCRL_VAL)
 #define U_WH_U &msc SCRL_UP
 #define U_WH_D &msc SCRL_DOWN
 #define U_WH_L &msc SCRL_LEFT
