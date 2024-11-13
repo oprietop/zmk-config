@@ -49,10 +49,14 @@
 
 // Mouse Wheel
 
-#define U_WH_U &msc MOVE_Y(ZMK_MOUSE_DEFAULT_SCRL_VAL)
-#define U_WH_D &msc MOVE_Y(-ZMK_MOUSE_DEFAULT_SCRL_VAL)
-#define U_WH_R &msc MOVE_X(-ZMK_MOUSE_DEFAULT_SCRL_VAL)
-#define U_WH_L &msc MOVE_X(ZMK_MOUSE_DEFAULT_SCRL_VAL)
+//#define U_WH_U &msc MOVE_Y(ZMK_MOUSE_DEFAULT_SCRL_VAL)
+//#define U_WH_D &msc MOVE_Y(-ZMK_MOUSE_DEFAULT_SCRL_VAL)
+//#define U_WH_R &msc MOVE_X(-ZMK_MOUSE_DEFAULT_SCRL_VAL)
+//#define U_WH_L &msc MOVE_X(ZMK_MOUSE_DEFAULT_SCRL_VAL)
+#define U_WH_U &msc SCRL_UP
+#define U_WH_D &msc SCRL_DOWN
+#define U_WH_L &msc SCRL_LEFT
+#define U_WH_R &msc SCRL_RIGHT
 
 &msc {
     acceleration-exponent = <1>;      // 0
