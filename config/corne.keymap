@@ -36,6 +36,16 @@
 
 // Mouse movement
 
+#define U_MOUSE_MOVE_MAX 3000
+
+#undef MOVE_UP
+#undef MOVE_DOWN
+#undef MOVE_LEFT
+#undef MOVE_RIGHT
+#define MOVE_UP MOVE_VERT(-U_MOUSE_MOVE_MAX)
+#define MOVE_DOWN MOVE_VERT(U_MOUSE_MOVE_MAX)
+#define MOVE_LEFT MOVE_HOR(-U_MOUSE_MOVE_MAX)
+#define MOVE_RIGHT MOVE_HOR(U_MOUSE_MOVE_MAX)
 #define U_MS_U &mmv MOVE_UP
 #define U_MS_D &mmv MOVE_DOWN
 #define U_MS_L &mmv MOVE_LEFT
@@ -48,7 +58,16 @@
 };
 
 // Mouse Wheel
+#define U_MOUSE_SCROLL_MAX 50
 
+#undef SCROLL_UP
+#undef SCROLL_DOWN
+#undef SCROLL_LEFT
+#undef SCROLL_RIGHT
+#define SCRL_UP SCRL_VERT(U_MOUSE_SCROLL_MAX)
+#define SCRL_DOWN SCRL_VERT(-U_MOUSE_SCROLL_MAX)
+#define SCRL_LEFT SCRL_HOR(-U_MOUSE_SCROLL_MAX)
+#define SCRL_RIGHT SCRL_HOR(U_MOUSE_SCROLL_MAX)
 #define U_WH_U &msc SCRL_UP
 #define U_WH_D &msc SCRL_DOWN
 #define U_WH_L &msc SCRL_LEFT
