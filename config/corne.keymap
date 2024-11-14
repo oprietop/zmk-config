@@ -15,6 +15,26 @@
 // Wake up on sleep
 
 / {
+    chosen {
+        zmk,kscan = &kscan0;
+    };
+
+    kscan: kscan {
+        compatible = "zmk,kscan-gpio-matrix";
+        diode-direction = "col2row";
+        wakeup-source;
+
+        col-gpios
+            = <&gpio0 12 GPIO_ACTIVE_HIGH>
+            , <&gpio1 9  GPIO_ACTIVE_HIGH>
+            ;
+        row-gpios
+            = <&gpio0 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio0 4  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio0 2  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            ;
+    };
+
     soft_off_wakers {
         compatible = "zmk,soft-off-wakeup-sources";
         wakeup-sources = <&kscan0>;
