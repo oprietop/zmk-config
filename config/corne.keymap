@@ -93,14 +93,14 @@
             >;
         };
 
-        Extra {
-            bindings = <
-&none  &kp LNLCK  &kp C_NEXT  &kp C_VOLUME_UP    &kp BT_NXT  &kp PSCRN       &kp LBRC   &kp LBKT   &kp RBKT   &kp RBRC  &kp PIPE   &none
-&none  &kp LCAPS  &kp C_PREV  &kp C_VOLUME_DOWN  &kp BT_PRV  &kp C_BRI_UP    &kp TILDE  &kp GRAVE  &kp SQT    &kp DQT   &kp BSLH   &none
-&none  &kp LSLCK  &kp C_PLAY  &kp C_MUTE         &kp BT_CLR  &kp C_BRI_DN    &kp UNDER  &kp MINUS  &kp EQUAL  &kp PLUS  &kp SLASH  &none
-                                      &none      &trans      &studio_unlock  &trans     &trans     &none
-            >;
-        };
+//        Extra {
+//            bindings = <
+//&none  &kp LNLCK  &kp C_NEXT  &kp C_VOLUME_UP    &kp BT_NXT  &kp PSCRN       &kp LBRC   &kp LBKT   &kp RBKT   &kp RBRC  &kp PIPE   &none
+//&none  &kp LCAPS  &kp C_PREV  &kp C_VOLUME_DOWN  &kp BT_PRV  &kp C_BRI_UP    &kp TILDE  &kp GRAVE  &kp SQT    &kp DQT   &kp BSLH   &none
+//&none  &kp LSLCK  &kp C_PLAY  &kp C_MUTE         &kp BT_CLR  &kp C_BRI_DN    &kp UNDER  &kp MINUS  &kp EQUAL  &kp PLUS  &kp SLASH  &none
+//                                      &none      &trans      &studio_unlock  &trans     &trans     &none
+//            >;
+//        };
 
     };
 };
