@@ -77,10 +77,10 @@
 
         Lower {
             bindings = <
-&none  &kp ESC    &kp K_COPY  U_WH_U        &kp K_CUT  &kp K_PASTE  &kp PAGE_UP    &mkp LCLK  U_MS_U    &mkp RCLK  &mkp MCLK  &none
-&none  &kp TAB    U_WH_L      U_WH_D        U_WH_R     &mkp MCLK    &kp HOME       U_MS_L     U_MS_D    U_MS_R     &kp END    &none
-&none  &kp LCTRL  &kp LSHFT   &kp LEFT_GUI  &mkp LCLK  &mkp RCLK    &kp PAGE_DOWN  &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT  &none
-                                            &none      &kp BT_NEXT  &kp RET        &kp INS    &trans
+&none  &kp ESC    &kp K_COPY  U_WH_U        &kp K_CUT    &kp K_PASTE  &kp PAGE_UP    &mkp LCLK  U_MS_U    &mkp RCLK  &mkp MCLK  &none
+&none  &kp TAB    U_WH_L      U_WH_D        U_WH_R       &mkp MCLK    &kp HOME       U_MS_L     U_MS_D    U_MS_R     &kp END    &none
+&none  &kp LCTRL  &kp LSHFT   &kp LEFT_GUI  &mkp LCLK    &mkp RCLK    &kp PAGE_DOWN  &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT  &none
+                              &none         &kp BT_NEXT  $trans       &kp RET        &kp INS    &none
             >;
         };
 
