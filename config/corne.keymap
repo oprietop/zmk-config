@@ -17,7 +17,7 @@
 &mt {
     flavor = "balanced";
     tapping-term-ms = <200>;
-    quick-tap-ms = <150>;
+    quick-tap-ms = 100>;
 };
 
 // Layer-tap
@@ -25,7 +25,7 @@
 &lt {
     flavor = "balanced";
     tapping-term-ms = <200>;
-    quick-tap-ms = <150>;
+    quick-tap-ms = <100>;
 };
 
 // Mouse defines/includes
@@ -69,7 +69,7 @@
         default_layer {
             bindings = <
 &none  &kp Q         &kp W        &kp F       &kp P        &mt RIGHT_ALT B    &mt RALT J       &kp L           &kp U           &kp Y            &kp SEMI         &none
-&none  &mt LSHIFT A  &kp R        &kp S       &kp T        &kp G              &kp M            &kp N           &kp E           &kp I            &mt RSHFT O      &none
+&none  &kp  A        &kp R        &kp S       &kp T        &kp G              &kp M            &kp N           &kp E           &kp I            &kp O            &none
 &none  &mt LCTRL Z   &mt LMETA X  &mt LALT C  &kp D        &kp V              &kp K            &kp H           &mt LALT COMMA  &mt RGUI PERIOD  &mt RCTRL SLASH  &none
                                   &none       &lt 1 SPACE  &lt 3 TAB          &mt RSHIFT DEL   &lt 2 BACKSPACE &none
             >;
