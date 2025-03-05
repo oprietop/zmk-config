@@ -68,10 +68,10 @@
 
         default_layer {
             bindings = <
-&none  &kp Q         &kp W        &kp F       &kp P      &mt RIGHT_ALT B    &mt RALT J       &kp L           &kp U           &kp Y            &kp SEMI         &none
-&none  &mt LSHIFT A  &kp R        &kp S       &kp T      &kp G              &kp M            &kp N           &kp E           &kp I            &mt RSHFT O      &none
-&none  &mt LCTRL Z   &mt LMETA X  &mt LALT C  &kp D      &kp V              &kp K            &kp H           &mt LALT COMMA  &mt RGUI PERIOD  &mt RCTRL SLASH  &none
-                                  &none       &lt 3 TAB  &lt 1 SPACE        &lt 2 BACKSPACE  &mt RSHIFT DEL  &none
+&none  &kp Q         &kp W        &kp F       &kp P        &mt RIGHT_ALT B    &mt RALT J       &kp L           &kp U           &kp Y            &kp SEMI         &none
+&none  &mt LSHIFT A  &kp R        &kp S       &kp T        &kp G              &kp M            &kp N           &kp E           &kp I            &mt RSHFT O      &none
+&none  &mt LCTRL Z   &mt LMETA X  &mt LALT C  &kp D        &kp V              &kp K            &kp H           &mt LALT COMMA  &mt RGUI PERIOD  &mt RCTRL SLASH  &none
+                                  &none       &lt 1 SPACE  &lt 3 TAB          &mt RSHIFT DEL   &lt 2 BACKSPACE &none
             >;
         };
 
@@ -80,7 +80,7 @@
 &none  &kp ESC    &kp K_COPY  U_WH_U        &kp K_CUT   &kp K_PASTE  &kp PAGE_UP    &mkp LCLK  U_MS_U    &mkp RCLK  &mkp MCLK  &none
 &none  &kp TAB    U_WH_L      U_WH_D        U_WH_R      &mkp MCLK    &kp HOME       U_MS_L     U_MS_D    U_MS_R     &kp END    &none
 &none  &kp LCTRL  &kp LSHFT   &kp LEFT_GUI  &mkp LCLK   &mkp RCLK    &kp PAGE_DOWN  &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT  &none
-                              &none         &bt BT_NXT  &trans       &kp RET        &kp INS    &none
+                              &none         &bt trans   &trans       &kp INS        &kp RET    &none
             >;
         };
 
