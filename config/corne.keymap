@@ -1,4 +1,4 @@
- /*
+/*
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
@@ -15,7 +15,7 @@
 // Mod-Tap
 
 &mt {
-    flavor = "balanced";
+    flavor = "tap-preferred";
     tapping-term-ms = <200>;
     quick-tap-ms = <200>;
     require-prior-idle-ms = <125>;
@@ -24,7 +24,7 @@
 // Layer-tap
 
 &lt {
-    flavor = "balanced";
+    flavor = "tap-preferred";
     tapping-term-ms = <200>;
     quick-tap-ms = <200>;
     require-prior-idle-ms = <125>;
