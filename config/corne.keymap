@@ -16,21 +16,23 @@
 
 &mt {
     flavor = "tap-preferred";
-    tapping-term-ms = <150>;
-    quick-tap-ms = <150>;
+    tapping-term-ms = <200>;
+    quick-tap-ms = <200>;
+    require-prior-idle-ms = <125>;
 };
 
 // Layer-tap
 
 &lt {
     flavor = "tap-preferred";
-    tapping-term-ms = <150>;
-    quick-tap-ms = <150>;
+    tapping-term-ms = <200>;
+    quick-tap-ms = <200>;
+    require-prior-idle-ms = <125>;
 };
 
 // Mouse defines/includes
 
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1800  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
 #include <dt-bindings/zmk/pointing.h>
 
