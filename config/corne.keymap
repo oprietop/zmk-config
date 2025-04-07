@@ -15,19 +15,17 @@
 // Mod-Tap
 
 &mt {
-    tapping-term-ms = <180>;
-    quick-tap-ms = <175>;
-    require-prior-idle-ms = <125>;
-    flavor = "balanced";
+    flavor = "tap-preferred";
+    tapping-term-ms = <150>;
+    quick-tap-ms = <150>;
 };
 
 // Layer-tap
 
 &lt {
-    tapping-term-ms = <180>;
-    quick-tap-ms = <175>;
-    require-prior-idle-ms = <125>;
-    flavor = "balanced";
+    flavor = "tap-preferred";
+    tapping-term-ms = <150>;
+    quick-tap-ms = <150>;
 };
 
 // Mouse defines/includes
