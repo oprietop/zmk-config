@@ -16,18 +16,16 @@
 
 &mt {
     flavor = "tap-preferred";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <200>;
-    require-prior-idle-ms = <125>;
+    tapping-term-ms = <150>;
+    quick-tap-ms = <150>;
 };
 
 // Layer-tap
 
 &lt {
     flavor = "tap-preferred";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <200>;
-    require-prior-idle-ms = <125>;
+    tapping-term-ms = <150>;
+    quick-tap-ms = <150>;
 };
 
 // Mouse defines/includes
@@ -67,15 +65,19 @@
 / {
     combos {
         compatible = "zmk,combos";
-        combo_lshift {
-            timeout-ms = <50>;
-            key-positions = <13 14>;
-            bindings = <&kp LSHIFT>;
-        };
-        combo_rshift {
-            timeout-ms = <50>;
-            key-positions = <21 22>;
-            bindings = <&kp RSHIFT>;
+        //combo_lshift {
+        //    timeout-ms = <50>;
+        //    key-positions = <13 14>;
+        //    bindings = <&kp LSHIFT>;
+        //};
+        //combo_rshift {
+        //    timeout-ms = <50>;
+        //    key-positions = <21 22>;
+        //    bindings = <&kp RSHIFT>;
+        //};
+        bluetooth {
+            bindings = <&mo 3>;
+            key-positions = <37 40>;
         };
     };
 
@@ -114,10 +116,10 @@
 
         default_layer {
             bindings = <
-&none  &kp Q         &kp W         &kp F        &kp P          &mt RIGHT_ALT B    &mt RALT J       &kp L           &kp U           &kp Y            &kp SEMI         &none
-&none  &hml LCTRL A  &hml LMETA R  &hml LALT S  &hml LSHIFT T  &kp G              &kp M            &hmr RSHIFT N   &hmr LALT E     &hmr RMETA I     &hmr RCTRL O     &none
-&none  &kp  Z        &kp X         &kp C        &kp D          &kp V              &kp K            &kp H           &kp COMMA       &kp PERIOD       &kp SLASH        &none
-                                   &none        &kp TAB        &lt 1 SPACE        &lt 2 BACKSPACE  &kp DEL         &none
+&none  &kp Q         &kp W         &kp F        &kp P          &hml RIGHT_ALT B   &hmr RALT J       &kp L           &kp U           &kp Y            &kp SEMI         &none
+&none  &hml LCTRL A  &hml LMETA R  &hml LALT S  &hml LSHIFT T  &kp G              &kp  M            &hmr RSHIFT N   &hmr LALT E     &hmr RMETA I     &hmr RCTRL O     &none
+&none  &kp  Z        &kp X         &kp C        &kp D          &kp V              &kp  K            &kp H           &kp COMMA       &kp PERIOD       &kp SLASH        &none
+                                   &none        &kp TAB        &lt 1 SPACE        &lt  2 BACKSPACE  &kp DEL         &none
             >;
         };
 
@@ -126,7 +128,7 @@
 &none  &kp ESC    &kp K_COPY  U_WH_U        &kp K_CUT   &kp K_PASTE  &kp PAGE_UP    &mkp LCLK  U_MS_U    &mkp RCLK  &mkp MCLK  &none
 &none  &kp TAB    U_WH_L      U_WH_D        U_WH_R      &mkp MCLK    &kp HOME       U_MS_L     U_MS_D    U_MS_R     &kp END    &none
 &none  &kp LCTRL  &kp LSHFT   &kp LEFT_GUI  &mkp LCLK   &mkp RCLK    &kp PAGE_DOWN  &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT  &none
-                              &none         &trans      &trans       &kp INS        &kp RET    &none
+                              &none         &trans      &trans       &kp RET        &kp INS    &none
             >;
         };
 
@@ -135,7 +137,16 @@
 &none  &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT  &kp CARET  &kp AMPS  &kp ASTERISK  &kp LPAR  &kp RPAR  &none
 &none  &kp N1    &kp N2  &kp N3    &kp N4      &kp N5       &kp N6     &kp N7    &kp N8        &kp N9    &kp N0    &none
 &none  &kp F1    &kp F2  &kp F3    &kp F4      &kp F5       &kp F6     &kp F7    &kp F8        &kp F9    &kp F10   &none
-                         &none     &kp RET     &kp F11      &kp F12    &trans    &none
+                         &none     &kp F11     &kp RET      &trans     &kp F12   &none
+            >;
+        };
+
+        Bluetooth {
+            bindings = <
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &bt BT_CLR  &trans
+&trans  &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans      &trans
+&trans  &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans      &trans
+                                    &trans        &trans        &trans          &trans  &trans  &trans
             >;
         };
 
