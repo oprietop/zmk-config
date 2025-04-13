@@ -121,7 +121,6 @@
             >;
         };
 
-&hml LCTRL A  &hml LMETA R  &hml LALT S  &hml LSHIFT T  
         Lower {
             bindings = <
 &none  &kp ESC    &kp K_COPY  U_WH_U        &kp K_CUT   &kp K_PASTE  &kp PAGE_UP    &mkp LCLK  U_MS_U    &mkp RCLK  &mkp MCLK  &none
