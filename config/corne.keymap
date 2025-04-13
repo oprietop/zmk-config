@@ -119,7 +119,7 @@
 &none  &kp Q         &kp W         &kp F        &kp P          &hml RIGHT_ALT B   &hmr RALT J       &kp L           &kp U           &kp Y            &kp SEMI         &none
 &none  &hml LCTRL A  &hml LMETA R  &hml LALT S  &hml LSHIFT T  &kp G              &kp  M            &hmr RSHIFT N   &hmr LALT E     &hmr RMETA I     &hmr RCTRL O     &none
 &none  &kp  Z        &kp X         &kp C        &kp D          &kp V              &kp  K            &kp H           &kp COMMA       &kp PERIOD       &kp SLASH        &none
-                                   &none        &kp TAB        &lt 1 SPACE        &lt  2 BACKSPACE  &kp DEL         &none
+                                   &none        &lt 4 TAB          &lt 1 SPACE        &lt  2 BACKSPACE  &kp DEL         &none
             >;
         };
 
@@ -152,10 +152,10 @@
 
         Extra {
             bindings = <
-&none  &kp LNLCK  &kp C_NEXT  &kp C_VOLUME_UP    &bt BT_NXT      &kp PSCRN       &kp LBRC   &kp LBKT   &kp RBKT   &kp RBRC  &kp PIPE   &none
-&none  &kp LCAPS  &kp C_PREV  &kp C_VOLUME_DOWN  &bt BT_PRV      &kp C_BRI_UP    &kp TILDE  &kp GRAVE  &kp SQT    &kp DQT   &kp BSLH   &none
-&none  &kp LSLCK  &kp C_PLAY  &kp C_MUTE         &bt BT_CLR_ALL  &kp C_BRI_DN    &kp UNDER  &kp MINUS  &kp EQUAL  &kp PLUS  &kp SLASH  &none
-                                      &none      &trans          &studio_unlock  &trans     &trans     &none
+&none  &kp LNLCK  &kp C_NEXT  &kp C_VOLUME_UP    &trans  &kp PSCRN       &kp LBRC   &kp LBKT   &kp RBKT   &kp RBRC  &kp PIPE   &none
+&none  &kp LCAPS  &kp C_PREV  &kp C_VOLUME_DOWN  &trans  &kp C_BRI_UP    &kp TILDE  &kp GRAVE  &kp SQT    &kp DQT   &kp BSLH   &none
+&none  &kp LSLCK  &kp C_PLAY  &kp C_MUTE         &trans  &kp C_BRI_DN    &kp UNDER  &kp MINUS  &kp EQUAL  &kp PLUS  &kp SLASH  &none
+                                      &none      &trans  &studio_unlock  &trans     &trans     &none
             >;
         };
     };
