@@ -7,62 +7,25 @@
 // https://zmk.dev/docs/keymaps/behaviors/hold-tap?examples=home_row_mods
 // https://github.com/urob/zmk-config?tab=readme-ov-file
 
-// Default includes
-
+// Includes
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-
-// Mod-Tap
-
-&mt {
-    flavor = "tap-preferred";
-    tapping-term-ms = <150>;
-    quick-tap-ms = <150>;
-};
-
-// Layer-tap
-
-&lt {
-    flavor = "tap-preferred";
-    tapping-term-ms = <150>;
-    quick-tap-ms = <150>;
-};
-
-// Mouse defines/includes
-
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1800  // default: 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
 #include <dt-bindings/zmk/pointing.h>
 
-// Mouse movement
-
-&mmv {
-  acceleration-exponent = <1>;      // 1
-  time-to-max-speed-ms = <750>;     // 300
-  delay-ms = <0>;                   // 0
-};
-
+// Mouse defines
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1800  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
 #define U_MS_U &mmv MOVE_UP
 #define U_MS_D &mmv MOVE_DOWN
 #define U_MS_L &mmv MOVE_LEFT
 #define U_MS_R &mmv MOVE_RIGHT
-
-// Mouse Wheel
-
-&msc {
-    acceleration-exponent = <0>;    // 0
-    time-to-max-speed-ms = <1>;     // 300
-    delay-ms = <0>;                 // 0
-};
-
 #define U_WH_U &msc SCRL_UP
 #define U_WH_D &msc SCRL_DOWN
 #define U_WH_L &msc SCRL_LEFT
 #define U_WH_R &msc SCRL_RIGHT
 
 //  Key Groups
-
 #define KEYS_L 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29
 #define KEYS_R 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35
 #define THUMBS 36 37 38 39 40 41 
@@ -87,7 +50,31 @@
     };
 
     behaviors {
-        hml: hml {
+        mt: mod_tap {
+            flavor = "tap-preferred";
+            tapping-term-ms = <150>;
+            quick-tap-ms = <150>;
+        };
+        
+        lt: layer_tap {
+            flavor = "tap-preferred";
+            tapping-term-ms = <150>;
+            quick-tap-ms = <150>;
+        };
+
+        mmv: mouse_movement {
+          acceleration-exponent = <1>;      // 1
+          time-to-max-speed-ms = <750>;     // 300
+          delay-ms = <0>;                   // 0
+        };
+
+        msc: mouse_scrollwheel {
+            acceleration-exponent = <0>;    // 0
+            time-to-max-speed-ms = <1>;     // 300
+            delay-ms = <0>;                 // 0
+        };
+
+        hml: home_row_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
@@ -99,7 +86,7 @@
             hold-trigger-on-release;
         };
     
-        hmr: hmr {
+        hmr: home_row_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
@@ -114,13 +101,12 @@
 
     keymap {
         compatible = "zmk,keymap";
-
         default_layer {
             bindings = <
-&none  &kp Q         &kp W         &kp F        &kp P          &hml RIGHT_ALT B  &hmr RALT J       &kp L            &kp U        &kp Y         &kp SEMI      &none
-&none  &hml LCTRL A  &hml LMETA R  &hml LALT S  &hml LSHIFT T  &kp G             &kp  M            &hmr RSHIFT N    &hmr LALT E  &hmr RMETA I  &hmr RCTRL O  &none
-&none  &kp  Z        &kp X         &kp C        &kp D          &kp V             &kp  K            &kp H            &kp COMMA    &kp PERIOD    &kp SLASH     &none
-                                   &none        &hml 4 TAB     &hml 1 SPACE      &hmr 2 BACKSPACE  &hmr RSHIFT DEL   &none
+&none  &kp Q         &kp W         &kp F        &kp P          &hml RALT B  &hmr RALT J      &kp L            &kp U        &kp Y         &kp SEMI      &none
+&none  &hml LCTRL A  &hml LMETA R  &hml LALT S  &hml LSHIFT T  &kp G        &kp  M           &hmr RSHIFT N    &hmr LALT E  &hmr RMETA I  &hmr RCTRL O  &none
+&none  &kp  Z        &kp X         &kp C        &kp D          &kp V        &kp  K           &kp H            &kp COMMA    &kp PERIOD    &kp SLASH     &none
+                                   &none        &hlt 3 TAB     &lt 1 SPACE  &lt 2 BACKSPACE  &mt RSHIFT DEL   &none
             >;
         };
 
@@ -129,7 +115,7 @@
 &none  &kp ESC    &kp K_COPY  U_WH_U        &kp K_CUT   &kp K_PASTE  &kp PAGE_UP    &mkp LCLK  U_MS_U    &mkp RCLK  &mkp MCLK  &none
 &none  &kp TAB    U_WH_L      U_WH_D        U_WH_R      &mkp MCLK    &kp HOME       U_MS_L     U_MS_D    U_MS_R     &kp END    &none
 &none  &kp LCTRL  &kp LSHFT   &kp LEFT_GUI  &mkp LCLK   &mkp RCLK    &kp PAGE_DOWN  &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT  &none
-                              &none         &trans      &trans       &kp RET        &kp INS    &none
+                              &none         &kp LCAPS   &trans       &kp RET        &kp INS    &none
             >;
         };
 
@@ -142,21 +128,21 @@
             >;
         };
 
-        Bluetooth {
-            bindings = <
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &bt BT_CLR  &trans
-&trans  &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans      &trans
-&trans  &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans      &trans
-                                    &trans        &trans        &trans          &trans  &trans  &trans
-            >;
-        };
-
         Extra {
             bindings = <
 &none  &kp LNLCK  &kp C_NEXT  &kp C_VOLUME_UP    &trans  &kp PSCRN       &kp LBRC   &kp LBKT   &kp RBKT   &kp RBRC  &kp PIPE   &none
 &none  &kp LCAPS  &kp C_PREV  &kp C_VOLUME_DOWN  &trans  &kp C_BRI_UP    &kp TILDE  &kp GRAVE  &kp SQT    &kp DQT   &kp BSLH   &none
 &none  &kp LSLCK  &kp C_PLAY  &kp C_MUTE         &trans  &kp C_BRI_DN    &kp UNDER  &kp MINUS  &kp EQUAL  &kp PLUS  &kp SLASH  &none
                                       &none      &trans  &studio_unlock  &trans     &trans     &none
+            >;
+        };
+
+        Bluetooth {
+            bindings = <
+&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &trans  &trans  &bt BT_CLR  &none
+&none  &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans      &none
+&none  &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans      &none
+                                   &none         &trans        &trans        &trans  &trans  &none
             >;
         };
     };
