@@ -51,13 +51,13 @@
 
     behaviors {
         mt: mod_tap {
-            //flavor = "tap-preferred";
+            flavor = "balanced";
             tapping-term-ms = <150>;
             quick-tap-ms = <150>;
         };
         
         lt: layer_tap {
-            //flavor = "tap-preferred";
+            flavor = "balanced";
             tapping-term-ms = <150>;
             quick-tap-ms = <150>;
         };
@@ -74,7 +74,7 @@
             delay-ms = <0>;               // 0
         };
 
-        hml: home_row_left {
+        hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
@@ -86,7 +86,7 @@
             hold-trigger-on-release;
         };
     
-        hmr: home_row_right {
+        hmr: home_row_mod_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
