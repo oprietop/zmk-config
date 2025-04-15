@@ -51,15 +51,15 @@
 
     behaviors {
         mt: mod_tap {
-            flavor = "balanced";     // hold-preferred
-            tapping-term-ms = <150>; // 200
-            quick-tap-ms = <150>;    // 0
+            flavor = "tap-preferred";  // hold-preferred
+            tapping-term-ms = <150>;   // 200
+            quick-tap-ms = <150>;      // 0
         };
         
         lt: layer_tap {
-            flavor = "balanced";      // tap-preferred
-            tapping-term-ms = <150>;  // 200
-            quick-tap-ms = <150>;     // 0
+            flavor = "tap-preferred";  // tap-preferred
+            tapping-term-ms = <150>;   // 200
+            quick-tap-ms = <150>;      // 0
         };
 
         mmv: mouse_move {
@@ -130,19 +130,19 @@
 
         Extra {
             bindings = <
-&none  &kp LNLCK  &kp C_NEXT  &kp C_VOLUME_UP    &trans  &kp PSCRN       &kp LBRC   &kp LBKT   &kp RBKT   &kp RBRC  &kp PIPE   &none
-&none  &kp LCAPS  &kp C_PREV  &kp C_VOLUME_DOWN  &trans  &kp C_BRI_UP    &kp TILDE  &kp GRAVE  &kp SQT    &kp DQT   &kp BSLH   &none
-&none  &kp LSLCK  &kp C_PLAY  &kp C_MUTE         &trans  &kp C_BRI_DN    &kp UNDER  &kp MINUS  &kp EQUAL  &kp PLUS  &kp SLASH  &none
-                                      &none      &trans  &studio_unlock  &trans     &trans     &none
+&none  &kp LNLCK  &kp C_NEXT  &kp C_VOLUME_UP    &C_FF     &kp PSCRN       &kp LBRC   &kp LBKT   &kp RBKT   &kp RBRC  &kp PIPE   &none
+&none  &kp LCAPS  &kp C_PREV  &kp C_VOLUME_DOWN  &C_RW     &kp C_BRI_UP    &kp TILDE  &kp GRAVE  &kp SQT    &kp DQT   &kp BSLH   &none
+&none  &kp LSLCK  &kp C_PLAY  &kp C_MUTE         &C_EJECT  &kp C_BRI_DN    &kp UNDER  &kp MINUS  &kp EQUAL  &kp PLUS  &kp SLASH  &none
+                                      &none      &trans    &studio_unlock  &trans     &trans     &none
             >;
         };
 
         Bluetooth {
             bindings = <
-&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &trans  &trans  &bt BT_CLR  &none
-&none  &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans      &none
-&none  &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans      &none
-                                   &none         &trans        &trans        &trans  &trans  &none
+&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bootloader  &trans  &trans  &trans  &bt BT_CLR  &none
+&none  &trans        &trans        &trans        &trans        &trans        &sys_reset   &trans  &trans  &trans  &trans      &none
+&none  &trans        &trans        &trans        &trans        &trans        &trans       &trans  &trans  &trans  &trans      &none
+                                   &none         &trans        &trans        &trans       &trans  &none
             >;
         };
     };
