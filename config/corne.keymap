@@ -51,27 +51,27 @@
 
     behaviors {
         mt: mod_tap {
-            flavor = "tap-preferred";
+            //flavor = "tap-preferred";
             tapping-term-ms = <150>;
             quick-tap-ms = <150>;
         };
         
         lt: layer_tap {
-            flavor = "tap-preferred";
+            //flavor = "tap-preferred";
             tapping-term-ms = <150>;
             quick-tap-ms = <150>;
         };
 
         mmv: mouse_movement {
-          acceleration-exponent = <1>;      // 1
-          time-to-max-speed-ms = <750>;     // 300
-          delay-ms = <0>;                   // 0
+          acceleration-exponent = <1>;   // 1
+          time-to-max-speed-ms = <750>;  // 300
+          delay-ms = <0>;                // 0
         };
 
         msc: mouse_scrollwheel {
-            acceleration-exponent = <0>;    // 0
-            time-to-max-speed-ms = <1>;     // 300
-            delay-ms = <0>;                 // 0
+            acceleration-exponent = <0>;  // 0
+            time-to-max-speed-ms = <1>;   // 300
+            delay-ms = <0>;               // 0
         };
 
         hml: home_row_left {
@@ -106,7 +106,7 @@
 &none  &kp Q         &kp W         &kp F        &kp P          &hml RALT B  &hmr RALT J      &kp L            &kp U        &kp Y         &kp SEMI      &none
 &none  &hml LCTRL A  &hml LMETA R  &hml LALT S  &hml LSHIFT T  &kp G        &kp  M           &hmr RSHIFT N    &hmr LALT E  &hmr RMETA I  &hmr RCTRL O  &none
 &none  &kp  Z        &kp X         &kp C        &kp D          &kp V        &kp  K           &kp H            &kp COMMA    &kp PERIOD    &kp SLASH     &none
-                                   &none        &hlt 3 TAB     &lt 1 SPACE  &lt 2 BACKSPACE  &mt RSHIFT DEL   &none
+                                   &none        &lt 3 TAB      &lt 1 SPACE  &lt 2 BACKSPACE  &mt RSHIFT DEL   &none
             >;
         };
 
