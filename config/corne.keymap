@@ -68,7 +68,7 @@
           delay-ms = <0>;                // 0
         };
 
-        msc: mouse_scrollwheel {
+        msc: mouse_scroll {
             acceleration-exponent = <0>;  // 0
             time-to-max-speed-ms = <1>;   // 300
             delay-ms = <0>;               // 0
