@@ -62,7 +62,7 @@
             quick-tap-ms = <150>;
         };
 
-        mmv: mouse_movement {
+        mmv: mouse_move {
           acceleration-exponent = <1>;   // 1
           time-to-max-speed-ms = <750>;  // 300
           delay-ms = <0>;                // 0
