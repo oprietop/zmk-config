@@ -51,15 +51,15 @@
 
     behaviors {
         mt: mod_tap {
-            flavor = "balanced";
-            tapping-term-ms = <150>;
-            quick-tap-ms = <150>;
+            flavor = "balanced";     // hold-preferred
+            tapping-term-ms = <150>; // 200
+            quick-tap-ms = <150>;    // 0
         };
         
         lt: layer_tap {
-            flavor = "balanced";
-            tapping-term-ms = <150>;
-            quick-tap-ms = <150>;
+            flavor = "balanced";      // tap-preferred
+            tapping-term-ms = <150>;  // 200
+            quick-tap-ms = <150>;     // 0
         };
 
         mmv: mouse_move {
