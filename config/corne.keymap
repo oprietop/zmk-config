@@ -44,7 +44,7 @@
         //    bindings = <&kp RSHIFT>;
         //};
         bluetooth {
-            bindings = <&mo 3>;
+            bindings = <&mo 4>;
             key-positions = <37 40>;
         };
     };
