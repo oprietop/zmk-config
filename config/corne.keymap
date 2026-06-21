@@ -52,14 +52,14 @@
     behaviors {
         mt: mod_tap {
             flavor = "tap-preferred";  // hold-preferred
-            tapping-term-ms = <150>;   // 200
-            quick-tap-ms = <150>;      // 0
+            tapping-term-ms = <130>;   // 200
+            quick-tap-ms = <100>;      // 0
         };
         
         lt: layer_tap {
             flavor = "tap-preferred";  // tap-preferred
-            tapping-term-ms = <150>;   // 200
-            quick-tap-ms = <150>;      // 0
+            tapping-term-ms = <130>;   // 200
+            quick-tap-ms = <100>;      // 0
         };
 
         mmv: mouse_move {
@@ -78,9 +78,9 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <100>;
             flavor = "balanced";
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release;
@@ -90,9 +90,9 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <100>;
             flavor = "balanced";
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;
