@@ -52,14 +52,14 @@
     behaviors {
         mt: mod_tap {
             flavor = "tap-preferred";  // hold-preferred
-            tapping-term-ms = <240>;   // 200
-            quick-tap-ms = <175>;      // 0
+            tapping-term-ms = <150>;   // 200
+            quick-tap-ms = <150>;      // 0
         };
         
         lt: layer_tap {
             flavor = "tap-preferred";  // tap-preferred
-            tapping-term-ms = <240>;   // 200
-            quick-tap-ms = <175>;      // 0
+            tapping-term-ms = <150>;   // 200
+            quick-tap-ms = <150>;      // 0
         };
 
         mmv: mouse_move {
